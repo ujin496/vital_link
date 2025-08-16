@@ -1,0 +1,14 @@
+#ifndef MQTT_CLIENT_WRAPPER_H
+#define MQTT_CLIENT_WRAPPER_H
+
+#include "mqtt_client.h"
+
+void mqtt_start(void);  // 초기화만
+esp_mqtt_client_handle_t mqtt_get_handle(void);  // 전역 핸들 제공
+
+bool mqtt_is_connected(void);
+
+// 센서 데이터 전송 함수 (현재 프로젝트에 맞게 수정)
+void mqtt_publish_sensor_data(float temperature, float humidity, float tvoc, float rs, float ratio);
+
+#endif

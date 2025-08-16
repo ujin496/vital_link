@@ -1,0 +1,11 @@
+idf_component_register(
+    SRCS 
+        "src/mpu6050_driver.c"
+        "src/mpu6050_step_fall.c"
+    INCLUDE_DIRS 
+        "include"
+    REQUIRES 
+        driver
+        esp_timer
+        common
+)

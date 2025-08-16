@@ -1,0 +1,49 @@
+# === Build output ===
+build/
+*.bin
+*.elf
+*.map
+*.a
+*.o
+*.obj
+
+# === CMake artifacts ===
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+*.cmake.in
+*.bin_timestamp
+
+# === Ninja build system ===
+.ninja_deps
+.ninja_log
+build.ninja
+
+# === VSCode 설정 파일 ===
+.vscode/
+c_cpp_properties.json
+settings.json
+*.code-workspace
+
+# === 기타 설정/캐시 파일 ===
+sdkconfig.old
+sdkconfig.defaults
+config.env
+*.log
+
+# === Python/virtualenv (선택적으로) ===
+__pycache__/
+*.pyc
+.env/
+.venv/
+python_env/
+
+# === IDF monitor history ===
+*.tmp
+monitor*
+
+# === OS 특화 ===
+.DS_Store
+Thumbs.db

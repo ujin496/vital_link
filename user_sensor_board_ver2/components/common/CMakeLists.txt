@@ -1,0 +1,24 @@
+idf_component_register(
+    SRCS 
+        "src/i2c_helper.c"
+        "src/sensor_data.c"
+        "src/wifi_connect.c"
+        "src/sensor_manager.c"
+        "src/sntp_helper.c"
+        "src/time_helper.c"
+        "src/dns_checker.c"
+    INCLUDE_DIRS 
+        "include"
+    REQUIRES 
+        driver
+        esp_wifi
+        esp_event
+        esp_netif
+        esp_timer
+        lwip
+        nvs_flash
+        freertos
+        gyro_sensor
+        heart_sensor
+        temp_sensor
+)
