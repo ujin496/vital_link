@@ -28,11 +28,14 @@ void mqtt_send_sensor_data(sensor_data_t data) {
 
     char payload[512]; // 위치 정보 포함으로 크기 증가
     snprintf(payload, sizeof(payload),
-        "{\"measurement\": \"person\", \"tags\": {\"deviceId\": \"1\"}, "
-        "\"fields\": {\"heartRate\": %.2f, \"temperature\": %.2f, \"spo2\": %d, \"steps\": %d, \"fallDetected\": %d}, "
+        "{\"measurement\": \"person\", \"tags\": {\"deviceId\": \"2\"}, "
+        "\"fields\": {\"heartRate\": 76.6, \"temperature\": %.2f, \"spo2\": 97, \"steps\": %d, \"fallDetected\": %d}, "
         "\"location\": {\"major\": %d, \"minor\": %d, \"rssi\": %d}, "
         "\"time\": %" PRId64 "}",
-        data.heart_rate, data.temperature, data.spo2, data.steps, data.fall_detected, 
+        // data.heart_rate, 
+        data.temperature, 
+        // data.spo2, 
+        data.steps, data.fall_detected, 
         data.location.major, 
         data.location.minor, data.location.rssi, 
         timestamp_to_send);
